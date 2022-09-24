@@ -1,22 +1,22 @@
 
 
-const spans = document.querySelectorAll('.tabs-toggle');
-const contents = document.querySelectorAll('.tabs-content');
+const spansList = document.querySelectorAll('.tabs-toggle');
+const contentList = document.querySelectorAll('.tabs-content');
 
-spans.forEach((span, i) => {      
+spansList.forEach((span, i) => {      
 
     span.addEventListener('click', () => {
 
-        contents.forEach((content) => {
+        contentList.forEach((content) => {
             content.classList.remove('is-active');                    
         });
         
-        spans.forEach((tab) => {
+        spansList.forEach((tab) => {
             tab.classList.remove('is-active');
         });  
         
-        contents[i].classList.add('is-active');
-        spans[i].classList.add('is-active');
+        contentList[i].classList.add('is-active');
+        spansList[i].classList.add('is-active');
     });
 
 });
